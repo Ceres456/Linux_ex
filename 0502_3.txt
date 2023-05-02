@@ -1,0 +1,418 @@
+root@student8-virtual-machine:~/바탕화면# cd..
+cd..: 명령을 찾을 수 없습니다
+root@student8-virtual-machine:~/바탕화면# nano /etc/passwd
+passwd   passwd-  
+root@student8-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student8-virtual-machine:~/바탕화면# nano /etc/shadow
+root@student8-virtual-machine:~/바탕화면# nano /etc/gruop
+root@student8-virtual-machine:~/바탕화면# nano /etc/gruop
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# adduser student8
+adduser: 'student8' 사용자는 이미 존재합니다.
+root@student8-virtual-machine:~/바탕화면# adduser Ceres4
+adduser: NAME_REGEX[_SYSTEM] 설정 변수를 이용해 설정한 정규 표현식과 일치하는 사용자 이름을 입력해주십시오.
+이 것을 확인하거나 NAME_REGEX 설정 변수를 다시 설정하려면 `--force-badname' 옵션을 사용해주십시오.
+root@student8-virtual-machine:~/바탕화면# adduser student1
+'student1' 사용자를 추가 중...
+새 그룹 'student1' (1001) 추가 ...
+새 사용자 'student1' (1001) 을(를) 그룹 'student1' (으)로 추가 ...
+'/home/student1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: Polytech1         
+	방 번호 []: 509
+	직장 전화번호 []: 02-333-5555
+	집 전화번호 []: 02-777-7777
+	기타 []: Student
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student8-virtual-machine:~/바탕화면# adduser --uid 1111 student2
+'student2' 사용자를 추가 중...
+새 그룹 'student2' (1111) 추가 ...
+새 사용자 'student2' (1111) 을(를) 그룹 'student2' (으)로 추가 ...
+'/home/student2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# adduser --gid 1000 student3
+'student3' 사용자를 추가 중...
+새 사용자 'student3' (1002) 을(를) 그룹 'student8' (으)로 추가 ...
+'/home/student3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# tail /etc/passwd
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student8:x:1000:1000:student8,,,:/home/student8:/bin/bash
+student1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/student1:/bin/bash
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+root@student8-virtual-machine:~/바탕화면# adduser --home /newhome student4
+'student4' 사용자를 추가 중...
+새 그룹 'student4' (1002) 추가 ...
+새 사용자 'student4' (1003) 을(를) 그룹 'student4' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student8:x:1000:1000:student8,,,:/home/student8:/bin/bash
+student1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/student1:/bin/bash
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+student4:x:1003:1002:,,,:/newhome:/bin/bash
+root@student8-virtual-machine:~/바탕화면# login
+student8-virtual-machine 로그인: student4
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+student4@student8-virtual-machine:~$ logout
+root@student8-virtual-machine:~/바탕화면# adduser --shell /bin/chs student5
+'student5' 사용자를 추가 중...
+새 그룹 'student5' (1003) 추가 ...
+새 사용자 'student5' (1004) 을(를) 그룹 'student5' (으)로 추가 ...
+useradd: Warning: missing or non-executable shell '/bin/chs'
+'/home/student5' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+student5의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student8:x:1000:1000:student8,,,:/home/student8:/bin/bash
+student1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/student1:/bin/bash
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+student4:x:1003:1002:,,,:/newhome:/bin/bash
+student5:x:1004:1003:,,,:/home/student5:/bin/chs
+root@student8-virtual-machine:~/바탕화면# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:student8
+student8:x:1000:
+sambashare:x:136:student8
+student1:x:1001:
+student2:x:1111:
+student4:x:1002:
+student5:x:1003:
+root@student8-virtual-machine:~/바탕화면# passwd student1
+새 암호: 
+잘못된 비밀번호: 암호가 앞뒤 어느쪽에서 읽어도 같은 문맥입니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+root@student8-virtual-machine:~/바탕화면# login
+student8-virtual-machine 로그인: student1
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+student1@student8-virtual-machine:~$ logout
+root@student8-virtual-machine:~/바탕화면# usermod --shell /bin/csh student1
+root@student8-virtual-machine:~/바탕화면# usermod --groups student8 student1
+root@student8-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# ls /home
+student1  student2  student3  student5  student8  t2.txt  t5.txt
+root@student8-virtual-machine:~/바탕화면# ls /
+apple  bin  boot  cdrom  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  melon  mnt  newhome  opt  proc  root  run  sbin  snap  srv  swapfile  sys  tmp  usr  var
+root@student8-virtual-machine:~/바탕화면# userdel -r student5
+userdel: student5 mail spool (/var/mail/student5) not found
+root@student8-virtual-machine:~/바탕화면# ls /home
+student1  student2  student3  student8  t2.txt  t5.txt
+root@student8-virtual-machine:~/바탕화면# nano /etc/passwd
+root@student8-virtual-machine:~/바탕화면# ^C
+root@student8-virtual-machine:~/바탕화면# chage -l student1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					: 안함
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 0
+암호를 바꿔야 하는 최대 날 수		: 99999
+암호 만료 예고를 하는 날 수		: 7
+root@student8-virtual-machine:~/바탕화면# chage -m 30 student1
+root@student8-virtual-machine:~/바탕화면# chage -l student1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					: 안함
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 30
+암호를 바꿔야 하는 최대 날 수		: 99999
+암호 만료 예고를 하는 날 수		: 7
+root@student8-virtual-machine:~/바탕화면# chage -m 10 student1
+root@student8-virtual-machine:~/바탕화면# chage -M 30 student1
+root@student8-virtual-machine:~/바탕화면# chage -l student1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					:  6월 01, 2023
+암호가 비활성화 기간					: 안함
+계정 만료						: 안함
+암호를 바꿀 수 있는 최소 날 수		: 10
+암호를 바꿔야 하는 최대 날 수		: 30
+암호 만료 예고를 하는 날 수		: 7
+root@student8-virtual-machine:~/바탕화면# chage -E 2026/12/31 student1
+root@student8-virtual-machine:~/바탕화면# -1 student1
+-1: 명령을 찾을 수 없습니다
+root@student8-virtual-machine:~/바탕화면# chage -l student1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					:  6월 01, 2023
+암호가 비활성화 기간					: 안함
+계정 만료						: 12월 31, 2026
+암호를 바꿀 수 있는 최소 날 수		: 10
+암호를 바꿔야 하는 최대 날 수		: 30
+암호 만료 예고를 하는 날 수		: 7
+root@student8-virtual-machine:~/바탕화면# chage -W 10 student1
+root@student8-virtual-machine:~/바탕화면# chage -l student1
+마지막으로 암호를 바꾼 날					:  5월 02, 2023
+암호 만료					:  6월 01, 2023
+암호가 비활성화 기간					: 안함
+계정 만료						: 12월 31, 2026
+암호를 바꿀 수 있는 최소 날 수		: 10
+암호를 바꿔야 하는 최대 날 수		: 30
+암호 만료 예고를 하는 날 수		: 10
+root@student8-virtual-machine:~/바탕화면# groups
+root
+root@student8-virtual-machine:~/바탕화면# groups student3
+student3 : student8
+root@student8-virtual-machine:~/바탕화면# groupadd newgroup1
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# groupadd --gid 2222 newgroup2
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# groupmod --new-name mygroup1 newgroup1
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# groupdel newgroup2
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# gpasswd mygroup1
+mygroup1 그룹의 암호를 바꾸는 중
+새 암호: 
+새 암호를 다시 입력하십시오: 
+root@student8-virtual-machine:~/바탕화면# gpasswd -a studnet1 mygroup1
+gpasswd: 'studnet1' 사용자가 없습니다
+root@student8-virtual-machine:~/바탕화면# gpasswd -a student1 mygroup1
+사용자 student1을(를) mygroup1 그룹에 등록 중
+root@student8-virtual-machine:~/바탕화면# gpasswd -a student4 mygroup1
+사용자 student4을(를) mygroup1 그룹에 등록 중
+root@student8-virtual-machine:~/바탕화면# gpasswd -A student1 mygroup1
+root@student8-virtual-machine:~/바탕화면# gpasswd -d student4 mygroup1
+사용자 student4을(를) 그룹 mygroup1에서 제거하는 중
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# adduser hanbit1
+'hanbit1' 사용자를 추가 중...
+새 그룹 'hanbit1' (1003) 추가 ...
+새 사용자 'hanbit1' (1004) 을(를) 그룹 'hanbit1' (으)로 추가 ...
+'/home/hanbit1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+hanbit1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student8:x:1000:1000:student8,,,:/home/student8:/bin/bash
+student1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/student1:/bin/csh
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+student4:x:1003:1002:,,,:/newhome:/bin/bash
+hanbit1:x:1004:1003:,,,:/home/hanbit1:/bin/bash
+root@student8-virtual-machine:~/바탕화면# tail /etc/group
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:student8
+student8:x:1000:student1
+sambashare:x:136:student8
+student1:x:1001:
+student2:x:1111:
+student4:x:1002:
+mygroup1:x:1112:student1
+hanbit1:x:1003:
+root@student8-virtual-machine:~/바탕화면# groupadd ubuntuGroup
+root@student8-virtual-machine:~/바탕화면# gpasswd -a hanbit1 ubuntuGroup
+사용자 hanbit1을(를) ubuntuGroup 그룹에 등록 중
+root@student8-virtual-machine:~/바탕화면# tail /etc/group
+gdm:x:134:
+lxd:x:135:student8
+student8:x:1000:student1
+sambashare:x:136:student8
+student1:x:1001:
+student2:x:1111:
+student4:x:1002:
+mygroup1:x:1112:student1
+hanbit1:x:1003:
+ubuntuGroup:x:1113:hanbit1
+root@student8-virtual-machine:~/바탕화면# adduser --gid 1113 hanbit2
+'hanbit2' 사용자를 추가 중...
+새 사용자 'hanbit2' (1005) 을(를) 그룹 'ubuntuGroup' (으)로 추가 ...
+'/home/hanbit2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+hanbit2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student8-virtual-machine:~/바탕화면# tail /etc/group
+gdm:x:134:
+lxd:x:135:student8
+student8:x:1000:student1
+sambashare:x:136:student8
+student1:x:1001:
+student2:x:1111:
+student4:x:1002:
+mygroup1:x:1112:student1
+hanbit1:x:1003:
+ubuntuGroup:x:1113:hanbit1
+root@student8-virtual-machine:~/바탕화면# nano /etc/group
+root@student8-virtual-machine:~/바탕화면# tail /etc/passwd
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student8:x:1000:1000:student8,,,:/home/student8:/bin/bash
+student1:x:1001:1001:Polytech1,509,02-333-5555,02-777-7777,Student:/home/student1:/bin/csh
+student2:x:1111:1111:,,,:/home/student2:/bin/bash
+student3:x:1002:1000:,,,:/home/student3:/bin/bash
+student4:x:1003:1002:,,,:/newhome:/bin/bash
+hanbit1:x:1004:1003:,,,:/home/hanbit1:/bin/bash
+hanbit2:x:1005:1113:,,,:/home/hanbit2:/bin/bash
+root@student8-virtual-machine:~/바탕화면# gpasswd -a hanbit2 ubuntuGroup
+사용자 hanbit2을(를) ubuntuGroup 그룹에 등록 중
+root@student8-virtual-machine:~/바탕화면# tail /etc/group
+gdm:x:134:
+lxd:x:135:student8
+student8:x:1000:student1
+sambashare:x:136:student8
+student1:x:1001:
+student2:x:1111:
+student4:x:1002:
+mygroup1:x:1112:student1
+hanbit1:x:1003:
+ubuntuGroup:x:1113:hanbit1,hanbit2
+root@student8-virtual-machine:~/바탕화면# ^C
+root@student8-virtual-machine:~/바탕화면# 
